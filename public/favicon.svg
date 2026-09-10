@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Background Gradient: Deep Onyx / Obsidian -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1816" />
+      <stop offset="100%" stop-color="#0D0C0B" />
+    </linearGradient>
+
+    <!-- Luxury UAE Champagne Gold Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5DEB3" />
+      <stop offset="35%" stop-color="#D4AF37" />
+      <stop offset="70%" stop-color="#B89358" />
+      <stop offset="100%" stop-color="#9E7B44" />
+    </linearGradient>
+
+    <!-- Subtle Gold Rim Border Gradient -->
+    <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#8E703B" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Drop Shadow for Monogram -->
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#D4AF37" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Luxury Rounded Crest Container -->
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="url(#bgGrad)" stroke="url(#rimGrad)" stroke-width="1.5" />
+
+  <!-- Inner Subtle Inset Rim -->
+  <rect x="5.5" y="5.5" width="53" height="53" rx="12" fill="none" stroke="url(#goldGrad)" stroke-width="0.75" stroke-opacity="0.35" />
+
+  <!-- Sevenria Royal Emblem: Sculpted Serif 'S' + Radiant Beauty Star -->
+  <g filter="url(#goldGlow)">
+    <!-- Elegant Serif 'S' -->
+    <path 
+      d="M38.8 20.8 C37.8 17.2, 34.5 15.2, 30.2 15.2 C24.6 15.2, 20.8 18.6, 20.8 23.0 C20.8 27.2, 23.6 29.6, 28.5 31.4 L31.2 32.4 C35.2 33.9, 37.4 35.8, 37.4 39.4 C37.4 44.2, 33.2 47.8, 27.2 47.8 C21.8 47.8, 17.8 44.4, 16.8 39.2 L21.6 38.2 C22.2 41.2, 24.4 43.4, 27.4 43.4 C30.6 43.4, 32.8 41.4, 32.8 38.8 C32.8 35.6, 30.4 33.8, 26.2 32.2 L23.6 31.2 C19.4 29.6, 16.4 27.0, 16.4 22.4 C16.4 16.8, 21.6 11.2, 30.2 11.2 C35.8 11.2, 41.2 14.4, 42.4 20.0 Z" 
+      fill="url(#goldGrad)" 
+    />
+
+    <!-- Diamond Beauty Star (Top Right of Monogram) -->
+    <path 
+      d="M45.5 13 L47 17.5 L51.5 19 L47 20.5 L45.5 25 L44 20.5 L39.5 19 L44 17.5 Z" 
+      fill="url(#goldGrad)" 
+    />
+
+    <!-- Mini Radiant Accent (Bottom Left) -->
+    <circle cx="16" cy="46" r="1.5" fill="#D4AF37" />
+  </g>
+</svg>
