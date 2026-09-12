@@ -137,7 +137,7 @@ export const INITIAL_ORDERS = [
     ],
     itemsCount: 2,
     totalAED: 270,
-    paymentMethod: 'Tabby (4 Payments)',
+    paymentMethod: 'Credit Card',
     paymentStatus: 'Paid',
     status: 'Delivered',
     trackingNumber: 'SE-DXB-927643'

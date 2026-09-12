@@ -11,7 +11,7 @@ export default function CategorySection() {
       <div className="container">
         <div className="section-header">
           <span className="section-eyebrow">CURATED COLLECTIONS</span>
-          <h2>Explore By Category</h2>
+          <h2>Browse by Categories</h2>
           <p className="section-subtitle">
             From dermatologist-approved barrier care to royal Arabian fragrances, explore our world of elevated beauty.
           </p>

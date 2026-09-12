@@ -17,9 +17,9 @@ export default function PromoBanner() {
           alignItems: 'center',
           border: '1px solid var(--border-medium)',
           boxShadow: 'var(--shadow-md)',
-          background: 'var(--color-bg-dark)'
+          background: '#FAF8F5'
         }}>
-          {/* Background Image */}
+          {/* Background Image (Clear & Crisp) */}
           <img 
             src="/images/promo-favorites.jpg" 
             alt="Beauty Favorites Editorial Curation"
@@ -29,15 +29,17 @@ export default function PromoBanner() {
               width: '100%',
               height: '100%',
               objectFit: 'cover',
-              objectPosition: 'center'
+              objectPosition: 'center right',
+              opacity: 1
             }}
           />
 
-          {/* Premium Gradient Overlay */}
+          {/* Soft Light Gradient Wash - Zero Black Shadow */}
           <div style={{
             position: 'absolute',
             inset: 0,
-            background: 'linear-gradient(to right, rgba(16, 16, 16, 0.92) 0%, rgba(16, 16, 16, 0.72) 45%, rgba(16, 16, 16, 0.15) 100%)'
+            background: 'linear-gradient(to right, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.74) 45%, rgba(255, 255, 255, 0) 80%)',
+            pointerEvents: 'none'
           }} />
 
           {/* Content Box */}
@@ -46,7 +48,7 @@ export default function PromoBanner() {
             zIndex: 2,
             padding: 'clamp(2rem, 5vw, 4rem)',
             maxWidth: '560px',
-            color: '#FFFFFF'
+            color: 'var(--color-text-primary)'
           }}>
             <div style={{
               display: 'inline-flex',
@@ -62,11 +64,11 @@ export default function PromoBanner() {
               <span>LIMITED UAE PROMOTION</span>
             </div>
 
-            <h2 style={{ color: '#FFFFFF', fontSize: 'clamp(2rem, 3.8vw, 2.8rem)', lineHeight: 1.15, marginBottom: '14px' }}>
+            <h2 style={{ color: '#111111', fontSize: 'clamp(2rem, 3.8vw, 2.8rem)', lineHeight: 1.15, marginBottom: '14px' }}>
               Beauty Favorites
             </h2>
 
-            <p style={{ color: 'rgba(255, 255, 255, 0.88)', fontSize: '1.05rem', lineHeight: 1.6, marginBottom: '28px' }}>
+            <p style={{ color: '#333333', fontSize: '1.05rem', lineHeight: 1.6, marginBottom: '28px' }}>
               Discover selected essentials at exceptional prices. Curated routines, multi-buy bundles, and complimentary deluxe samples with every order.
             </p>
 
@@ -79,7 +81,7 @@ export default function PromoBanner() {
                 <ArrowRight size={16} />
               </button>
 
-              <div style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.75)', display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <div style={{ fontSize: '0.8rem', color: '#555555', display: 'flex', alignItems: 'center', gap: '6px' }}>
                 <span style={{ color: 'var(--color-gold)' }}>★</span>
                 <span>Use code <strong>WELCOME10</strong> for 10% off</span>
               </div>

@@ -11,8 +11,6 @@ import {
   Star, 
   Tag, 
   Gift, 
-  ChevronLeft, 
-  ChevronRight,
   Copy,
   Zap,
   Package
@@ -81,7 +79,6 @@ export default function HeroSection() {
       id: 'featured',
       tabLabel: 'Featured Product',
       tabIcon: Star,
-      eyebrow: 'CULT UAE HOLY GRAIL • 4.9 ★ (1,420 REVIEWS)',
       titleMain: 'Advanced Snail 96',
       titleSub: 'Mucin Power Essence',
       description: 'Formulated with 96.3% snail secretion filtrate to deeply repair post-sun barrier damage, soothe indoor AC dehydration, and deliver glass-skin vitality.',
@@ -100,7 +97,6 @@ export default function HeroSection() {
       id: 'new',
       tabLabel: 'New Arrivals',
       tabIcon: Sparkles,
-      eyebrow: 'FRESH ARRIVAL IN DUBAI • JAPANESE SALON GRADE',
       titleMain: 'Japan’s Salon Secret:',
       titleSub: 'Fino Hair Oil Elixir',
       description: 'The viral weightless essence oil that smooths split ends, provides up to 230°C thermal protection, and locks out UAE humidity with mirror-like shine.',
@@ -119,7 +115,6 @@ export default function HeroSection() {
       id: 'sale',
       tabLabel: 'Flash Sale',
       tabIcon: Flame,
-      eyebrow: 'THE UAE BEAUTY FESTIVAL • FLASH DISCOUNTS',
       titleMain: 'Limited-Time Price Drops',
       titleSub: 'Save Up to 40% Today',
       description: 'Deep markdowns on viral blackhead melting cleansers, barrier repair toners, and luxury fragrances. Same-day dispatch across Dubai, next-day across UAE.',
@@ -138,7 +133,6 @@ export default function HeroSection() {
       id: 'combo',
       tabLabel: 'Special Combo',
       tabIcon: Gift,
-      eyebrow: 'CURATED 3-PIECE ROUTINE • SAVE 25% AS A SET',
       titleMain: 'The 3-Step Glass Skin',
       titleSub: 'Double Cleanse & Glow',
       description: 'Anua Pore Cleansing Oil + Heartleaf 77% Soothing Toner + COSRX Snail Mucin 96 Essence. The complete dermatologist-approved K-Beauty ritual.',
@@ -157,7 +151,6 @@ export default function HeroSection() {
       id: 'offers',
       tabLabel: 'Special Offers',
       tabIcon: Tag,
-      eyebrow: 'WATSONS VALUE TIERS & PROMO CODES',
       titleMain: 'Buy 2, Get 1 Free (3 for 2)',
       titleSub: '+ Extra 15% Off Code',
       description: 'Mix & match your favorite salon haircare, cosmetics, and essences. Use code SEVENRIA15 for an extra 15% discount plus a complimentary luxury mini on orders AED 250+.',
@@ -225,55 +218,7 @@ export default function HeroSection() {
       onTouchEnd={handleTouchEnd}
     >
       <div className="container">
-        {/* Top Category Slider Quick Tabs */}
-        <div style={{ marginBottom: '14px' }}>
-          <div className="hero-category-nav">
-            {slides.map((s, idx) => {
-              const Icon = s.tabIcon;
-              const isActive = currentSlide === idx;
-              return (
-                <button
-                  key={s.id}
-                  onClick={() => setCurrentSlide(idx)}
-                  className={`hero-cat-btn ${isActive ? 'active' : ''}`}
-                  aria-label={`Jump to ${s.tabLabel}`}
-                >
-                  <Icon size={15} className="hero-cat-icon" />
-                  <span>{s.tabLabel}</span>
-                  {isActive && (
-                    <span style={{ 
-                      width: '6px', 
-                      height: '6px', 
-                      borderRadius: '50%', 
-                      background: 'var(--color-gold)',
-                      marginLeft: '2px'
-                    }} />
-                  )}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Main Slider Stage Wrapper */}
         <div className="hero-slider-wrap">
-          {/* Previous Arrow Button */}
-          <button
-            onClick={() => setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length)}
-            className="hero-nav-arrow prev"
-            aria-label="Previous Slide"
-          >
-            <ChevronLeft size={22} />
-          </button>
-
-          {/* Next Arrow Button */}
-          <button
-            onClick={() => setCurrentSlide(prev => (prev + 1) % slides.length)}
-            className="hero-nav-arrow next"
-            aria-label="Next Slide"
-          >
-            <ChevronRight size={22} />
-          </button>
 
           {/* Slide Rendering */}
           {slides.map((slide, index) => {
@@ -292,7 +237,7 @@ export default function HeroSection() {
                   position: 'relative'
                 }}
               >
-                {/* Background Editorial Image */}
+                {/* Background Editorial Image (Crisp & Clear) */}
                 <img 
                   src={slide.bgImage} 
                   alt={slide.titleMain}
@@ -302,16 +247,17 @@ export default function HeroSection() {
                     width: '100%',
                     height: '100%',
                     objectFit: 'cover',
-                    opacity: 0.38,
-                    filter: 'saturate(1.15) brightness(0.9)'
+                    objectPosition: 'center right',
+                    opacity: 1
                   }}
                 />
 
-                {/* Dark Luxury Gradient Overlays */}
+                {/* Soft Light Gradient Wash for Text Readability - Zero Black Shadows */}
                 <div style={{
                   position: 'absolute',
                   inset: 0,
-                  background: 'linear-gradient(to right, rgba(12, 12, 12, 0.96) 0%, rgba(18, 18, 18, 0.88) 55%, rgba(18, 18, 18, 0.65) 100%)'
+                  background: 'linear-gradient(to right, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.72) 48%, rgba(255, 255, 255, 0) 82%)',
+                  pointerEvents: 'none'
                 }} />
 
                 {/* Ambient Color Glow based on slide accent */}
@@ -339,45 +285,17 @@ export default function HeroSection() {
                 }}>
                   {/* Left Hero Editorial Column */}
                   <div style={{ maxWidth: '580px' }}>
-                    {/* Eyebrow Pill */}
-                    <div style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '8px',
-                      padding: '6px 14px',
-                      background: 'rgba(255, 255, 255, 0.08)',
-                      backdropFilter: 'blur(10px)',
-                      border: '1px solid rgba(255, 255, 255, 0.18)',
-                      borderRadius: 'var(--radius-pill)',
-                      marginBottom: '16px'
-                    }}>
-                      <span style={{ 
-                        width: '8px', 
-                        height: '8px', 
-                        borderRadius: '50%', 
-                        background: slide.accentColor,
-                        boxShadow: `0 0 10px ${slide.accentColor}`
-                      }} />
-                      <span style={{ 
-                        fontSize: '0.7rem', 
-                        fontWeight: 700, 
-                        letterSpacing: '0.12em', 
-                        textTransform: 'uppercase', 
-                        color: '#FFFFFF' 
-                      }}>
-                        {slide.eyebrow}
-                      </span>
-                    </div>
+
 
                     {/* Headline */}
                     <h1 style={{ 
                       marginBottom: '14px', 
-                      color: '#FFFFFF', 
+                      color: '#111111', 
                       fontSize: 'clamp(2.1rem, 4.4vw, 3.4rem)', 
                       lineHeight: 1.12 
                     }}>
                       {slide.titleMain} <br />
-                      <span style={{ fontStyle: 'italic', color: 'var(--color-gold)' }}>
+                      <span style={{ fontStyle: 'italic', color: 'var(--color-gold-hover)' }}>
                         {slide.titleSub}
                       </span>
                     </h1>
@@ -386,7 +304,7 @@ export default function HeroSection() {
                     <p style={{ 
                       fontSize: '0.96rem', 
                       lineHeight: 1.62, 
-                      color: 'rgba(255, 255, 255, 0.82)', 
+                      color: '#333333', 
                       marginBottom: '26px' 
                     }}>
                       {slide.description}
@@ -407,11 +325,12 @@ export default function HeroSection() {
                         onClick={slide.secondaryBtnAction}
                         className="btn"
                         style={{
-                          background: 'rgba(255, 255, 255, 0.12)',
-                          backdropFilter: 'blur(8px)',
-                          color: '#FFFFFF',
-                          border: '1px solid rgba(255, 255, 255, 0.28)',
-                          padding: '12px 20px'
+                          background: '#FFFFFF',
+                          color: 'var(--color-text-primary)',
+                          border: '1px solid var(--border-medium)',
+                          padding: '12px 20px',
+                          boxShadow: '0 2px 8px rgba(0, 0, 0, 0.06)',
+                          fontWeight: 600
                         }}
                       >
                         {slide.secondaryBtnText}
@@ -424,7 +343,7 @@ export default function HeroSection() {
                       flexWrap: 'wrap', 
                       gap: '18px', 
                       fontSize: '0.78rem', 
-                      color: 'rgba(255, 255, 255, 0.85)' 
+                      color: '#444444' 
                     }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                         <Truck size={15} style={{ color: 'var(--color-gold)' }} />
@@ -949,7 +868,7 @@ export default function HeroSection() {
             <div style={{
               fontSize: '0.75rem',
               fontWeight: 700,
-              color: 'rgba(255, 255, 255, 0.75)',
+              color: '#333333',
               letterSpacing: '0.1em'
             }}>
               0{currentSlide + 1} / 0{slides.length}

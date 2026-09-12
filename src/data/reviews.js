@@ -30,7 +30,7 @@ export const REVIEWS = [
     avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80',
     rating: 5,
     title: 'Exceptional curation of K-Beauty & Luxury Haircare',
-    comment: 'I used to ask friends travelling to Tokyo or Seoul to bring Fino and Medicube. Now having authentic stock right here with Tabby 4-month installments is amazing. Customer concierge on WhatsApp is super responsive too!',
+    comment: 'I used to ask friends travelling to Tokyo or Seoul to bring Fino and Medicube. Now having authentic stock right here with fast Dubai delivery is amazing. Customer concierge on WhatsApp is super responsive too!',
     productName: 'Fino Premium Touch Hair Mask 230g',
     verifiedPurchase: true,
     date: '2 weeks ago'

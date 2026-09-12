@@ -267,7 +267,7 @@ export default function Footer() {
 
           {/* Payment Badges */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-            {['Apple Pay', 'Visa', 'Mastercard', 'Tabby (4x)', 'Tamara', 'Cash on Delivery'].map((m) => (
+            {['Apple Pay', 'Visa', 'Mastercard', 'Cash on Delivery'].map((m) => (
               <span
                 key={m}
                 style={{

@@ -10,7 +10,7 @@ const TRUST_ITEMS = [
   {
     icon: ShieldCheck,
     title: 'Secure Payments',
-    description: '100% secure checkout supporting Apple Pay, Visa, Mastercard, Tabby 4 interest-free installments, and Cash on Delivery.'
+    description: '100% secure checkout supporting Apple Pay, Visa, Mastercard, and Cash on Delivery.'
   },
   {
     icon: RefreshCw,

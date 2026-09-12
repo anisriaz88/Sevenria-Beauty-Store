@@ -29,7 +29,7 @@ export default function CheckoutWizard() {
     address: 'Al Marsa Street, Tower 2, Apt 2804',
     instructions: 'Please call mobile upon arrival. Concierge has access.',
     // Step 3: Payment
-    paymentMethod: 'Credit Card', // 'Credit Card' | 'Apple Pay' | 'Cash on Delivery' | 'Tabby'
+    paymentMethod: 'Credit Card', // 'Credit Card' | 'Apple Pay' | 'Cash on Delivery'
     cardNumber: '•••• •••• •••• 4242',
     cardExpiry: '08/28',
     cardCvv: '•••'
@@ -372,37 +372,6 @@ export default function CheckoutWizard() {
               <input 
                 type="radio" 
                 checked={formData.paymentMethod === 'Cash on Delivery'} 
-                onChange={() => {}} 
-                style={{ accentColor: 'var(--color-gold)' }} 
-              />
-            </div>
-
-            {/* 4. Tabby 4 Installments */}
-            <div 
-              onClick={() => handleChange('paymentMethod', 'Tabby (4 Installments)')}
-              style={{
-                border: formData.paymentMethod === 'Tabby (4 Installments)' ? '2px solid var(--color-gold)' : '1px solid var(--border-medium)',
-                borderRadius: 'var(--radius-xs)',
-                padding: '16px',
-                cursor: 'pointer',
-                background: formData.paymentMethod === 'Tabby (4 Installments)' ? '#FFFDF8' : '#FFFFFF',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between'
-              }}
-            >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <span style={{ background: '#3EED82', color: '#000000', fontWeight: 800, padding: '3px 8px', borderRadius: '4px', fontSize: '0.75rem' }}>
-                  tabby
-                </span>
-                <div>
-                  <div style={{ fontWeight: 600, fontSize: '0.92rem' }}>Tabby: 4 Interest-Free Payments</div>
-                  <div style={{ fontSize: '0.74rem', color: 'var(--color-text-muted)' }}>Pay AED {Math.round(cartTotal / 4)} today and split remaining across 3 months</div>
-                </div>
-              </div>
-              <input 
-                type="radio" 
-                checked={formData.paymentMethod === 'Tabby (4 Installments)'} 
                 onChange={() => {}} 
                 style={{ accentColor: 'var(--color-gold)' }} 
               />

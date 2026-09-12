@@ -40,8 +40,8 @@ export default function ContactPage() {
       a: '100% Guaranteed. Sevenria Beauty sources directly from certified brand headquarters, authorized Middle Eastern distributors, and verified laboratories in South Korea, Japan, France, and the USA.'
     },
     {
-      q: 'Can I pay with Cash on Delivery (COD) or Tabby?',
-      a: 'Yes! We support Cash on Delivery, Apple Pay, Visa, Mastercard, and Tabby 4 interest-free installments.'
+      q: 'Can I pay with Cash on Delivery (COD)?',
+      a: 'Yes! We support Cash on Delivery, Apple Pay, Visa, and Mastercard.'
     },
     {
       q: 'What is your return policy?',

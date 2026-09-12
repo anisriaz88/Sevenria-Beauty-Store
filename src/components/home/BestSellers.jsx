@@ -14,7 +14,7 @@ export default function BestSellers() {
     : bestSellerProducts.filter(p => p.category.toLowerCase() === selectedFilter.toLowerCase());
 
   return (
-    <section className="section-padding" style={{ background: '#FFFFFF', borderTop: '1px solid var(--border-light)', borderBottom: '1px solid var(--border-light)' }}>
+    <section className="section-padding" style={{ background: '#FFFFFF', borderBottom: '1px solid var(--border-light)' }}>
       <div className="container">
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '2.5rem', gap: '20px' }}>
           <div>

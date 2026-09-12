@@ -8,7 +8,6 @@ export default function ProductInfo({ product }) {
   const [selectedSize, setSelectedSize] = useState(product.size || 'Standard');
 
   const isLiked = isInWishlist(product.id);
-  const tabbyInstallment = Math.round((product.priceAED / 4) * 10) / 10;
 
   const handleAddToCart = () => {
     addToCart(product, qty, selectedSize);
@@ -63,7 +62,7 @@ export default function ProductInfo({ product }) {
         </div>
       </div>
 
-      {/* Price & Installments */}
+      {/* Price */}
       <div style={{ padding: '16px', background: '#F9F8F6', borderRadius: 'var(--radius-xs)', border: '1px solid var(--border-light)' }}>
         <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px' }}>
           <span style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--color-text-primary)' }}>
@@ -82,25 +81,6 @@ export default function ProductInfo({ product }) {
         </div>
         <div style={{ fontSize: '0.76rem', color: 'var(--color-text-muted)', marginTop: '4px' }}>
           VAT included (5%). Free UAE delivery applies on orders over AED 150.
-        </div>
-
-        {/* Tabby / Tamara Installment Callout */}
-        <div style={{
-          marginTop: '12px',
-          paddingTop: '12px',
-          borderTop: '1px solid rgba(0,0,0,0.06)',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '8px',
-          fontSize: '0.82rem',
-          color: 'var(--color-text-secondary)'
-        }}>
-          <span style={{ background: '#3EED82', color: '#000000', fontWeight: 800, padding: '2px 6px', borderRadius: '3px', fontSize: '0.65rem' }}>
-            tabby
-          </span>
-          <span>
-            or 4 interest-free payments of <strong>AED {tabbyInstallment}</strong>
-          </span>
         </div>
       </div>
 
@@ -221,7 +201,7 @@ export default function ProductInfo({ product }) {
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.84rem' }}>
           <RefreshCw size={18} style={{ color: 'var(--color-gold)', flexShrink: 0 }} />
-          <span><strong>Cash on Delivery & Tabby:</strong> Flexible UAE payment options</span>
+          <span><strong>Cash on Delivery & Secure Cards:</strong> Flexible UAE payment options</span>
         </div>
       </div>
     </div>
